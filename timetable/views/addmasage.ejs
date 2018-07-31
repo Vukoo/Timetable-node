@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title> Add massage</title>
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+              crossorigin="anonymous"></script>
+              <script src="/assets/addmasage.js"></script>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+
+
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+            <div class="container">
+                    
+                    <form>
+                        <input type="text" name="massagetype" placeholder="Add new massage" required/>
+                        <input type="text" name="price" placeholder="Enter price" required/>
+                        <input type="text" name="time" placeholder="Enter time" required/>
+                        <button type="submit">Add a new masage </button>
+                    </form>
+                    </div>
+                    <!-- /.container-fluid -->
+                    
+                    <div class="table-responsive col-6 offset-md-3  ">
+                            <table class="table table-bordered " id="dataTable" width="100%" cellspacing="0">
+                              <thead>
+                                <tr>
+                                  <th>Typ masażu</th>
+                                  <th>Cena</th>
+                                  <th>Czas</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                    
+                                            <% for(var i=0; i < todos.length; i++){ %>
+                                                <tr>
+                                                <td> <%= todos[i].massagetype %> </td>
+                                                <td> <%= todos[i].price %> </td>
+                                                <td> <%= todos[i].time %> </td>
+                                            </tr>
+                                                <% } %>
+                                </tbody>
+                                </table>
+                        </div>
+                </div>
+                    <script> let temp= $('form input[name=massagetype]');
+                    console.log(temp.val()); </script>
+                    
+                  
+    </body>
+</html>

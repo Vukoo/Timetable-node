@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title> To do list</title>
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+              crossorigin="anonymous"></script>
+              <script src="/assets/login.js"></script>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+
+
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <ul>
+                <% for(var i=0; i < todos.length; i++){ %>
+                <li><%= todos[i].item %></li>
+                <li><%= todos[i].users %></li>
+                <% } %>
+            </ul>
+            <form>
+                <input type="text" name="item" placeholder="Add new item" required/>
+                <input type="text" name="users" placeholder="Enter name" required/>
+                <button type="submit">Add a new item </button>
+            </form>
+            </div>
+    </body>
+</html>
