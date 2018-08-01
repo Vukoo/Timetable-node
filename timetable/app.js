@@ -2,6 +2,7 @@ const express = require('express');
 const todoController = require('./controllers/todoController');
 const loginController = require('./controllers/loginController');
 const adminController = require('./controllers/adminController');
+const reservationController= require('./controllers/reservationController');
 const app = express();
 
 
@@ -22,6 +23,7 @@ app.use(express.static('./public'));
 todoController(app);
 loginController(app);
 adminController(app);
+reservationController(app);
 
 //listen to port
 app.listen(3000);
