@@ -11,6 +11,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.3",
+    "bootstrap-datetimepicker-npm": "^4.17.37-npm",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
