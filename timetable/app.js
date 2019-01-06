@@ -12,16 +12,15 @@ app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redi
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
 
 console.log(__dirname)
-//set up template engine
+//set up template engine/view
 app.set('view engine', 'ejs');
+app.set("views","./views")
 
 //static file
 app.use(express.static('./public'));
 
 //fire controller
-todoController(app);
-loginController(app);
-adminController(app);
+//todoController(app);
 
 //listen to port
 app.listen(3000);
