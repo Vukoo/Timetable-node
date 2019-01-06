@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title> Add massage</title>
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+              crossorigin="anonymous"></script>
+              <script src="/assets/reservation.js"></script>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+
+
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+            <div class="container">
+                    
+                    <form>
+                        <input type="text" name="firstName" placeholder="Enter first name" required/>
+                        <input type="text" name="lastName" placeholder="Enter last Name" required/>
+                        <input type="text" name="phone" placeholder="Enter phone Number" required/>
+                        <button type="submit">Next steps </button>
+                    </form>
+                    </div>
+                    <!-- /.container-fluid -->
+                    
+                    <div class="table-responsive col-6 offset-md-3  ">
+                            <table class="table table-bordered " id="dataTable" width="100%" cellspacing="0">
+                              <thead>
+                                <tr>
+                                  <th>Imie</th>
+                                  <th>Nazwisko</th>
+                                  <th>Kontakt</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                    
+                                            <% for(var i=0; i < todos.length; i++){ %>
+                                                <tr>
+                                                <td> <%= todos[i].firstName %> </td>
+                                                <td> <%= todos[i].lastName %> </td>
+                                                <td> <%= todos[i].phone %> </td>
+                                            </tr>
+                                                <% } %>
+                                </tbody>
+                                </table>
+                        </div>
+                </div>
+                    <script> let temp= $('form input[name=firstName]');
+                    console.log(temp.val()); </script>
+                    
+                  
+    </body>
+</html>

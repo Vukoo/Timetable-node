@@ -2,6 +2,7 @@ const express = require('express');
 const todoController = require('./controllers/todoController');
 const loginController = require('./controllers/loginController');
 const adminController = require('./controllers/adminController');
+const reservationController= require('./controllers/reservationController');
 const app = express();
 
 
@@ -20,7 +21,14 @@ app.set("views","./views")
 app.use(express.static('./public'));
 
 //fire controller
+<<<<<<< HEAD
 //todoController(app);
+=======
+todoController(app);
+loginController(app);
+adminController(app);
+reservationController(app);
+>>>>>>> be2ccd6a2467fa1e5b3e7e70eaf17a9d5799b91f
 
 //listen to port
 app.listen(3000);
